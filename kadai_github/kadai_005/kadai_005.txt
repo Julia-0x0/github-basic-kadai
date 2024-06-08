@@ -1,0 +1,55 @@
+yuko_@MSI MINGW64 /c/samurai
+$ mkdir git_challenge
+
+yuko_@MSI MINGW64 /c/samurai
+$ cd git_challenge
+
+yuko_@MSI MINGW64 /c/samurai/git_challenge
+$ git init
+Initialized empty Git repository in C:/samurai/git_challenge/.git/
+
+yuko_@MSI MINGW64 /c/samurai/git_challenge (main)
+$ touch hello_world.txt
+
+yuko_@MSI MINGW64 /c/samurai/git_challenge (main)
+$ echo "Hello, world!" >> hello_world.txt
+
+yuko_@MSI MINGW64 /c/samurai/git_challenge (main)
+$ cat hello_world.txt
+Hello, world!
+
+yuko_@MSI MINGW64 /c/samurai/git_challenge (main)
+$ git add hello_world.txt
+warning: in the working copy of 'hello_world.txt', LF will be replaced by CRLF the next time Git touches it
+
+yuko_@MSI MINGW64 /c/samurai/git_challenge (main)
+$ git commit -m "hello_world.txtを追加"
+[main (root-commit) 2208bb3] hello_world.txtを追加
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+
+yuko_@MSI MINGW64 /c/samurai/git_challenge (main)
+$ git log --oneline
+2208bb3 (HEAD -> main) hello_world.txtを追加
+
+yuko_@MSI MINGW64 /c/samurai/git_challenge (main)
+$ echo "こんにちは、世界！" >> hello_world.txt
+
+yuko_@MSI MINGW64 /c/samurai/git_challenge (main)
+$ cat hello_world.txt
+Hello, world!
+こんにちは、世界！
+
+yuko_@MSI MINGW64 /c/samurai/git_challenge (main)
+$ git add hello_world.txt
+warning: in the working copy of 'hello_world.txt', LF will be replaced by CRLF the next time Git touches it
+
+yuko_@MSI MINGW64 /c/samurai/git_challenge (main)
+$ git commit -m "日本語訳を追記"
+[main 8c4740b] 日本語訳を追記
+ 1 file changed, 1 insertion(+)
+
+yuko_@MSI MINGW64 /c/samurai/git_challenge (main)
+$ git log --oneline
+8c4740b (HEAD -> main) 日本語訳を追記
+2208bb3 hello_world.txtを追加
